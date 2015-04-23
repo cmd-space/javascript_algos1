@@ -1,6 +1,30 @@
 <script>
+// 1:
 	var x = [3, 5, 'Dojo', 'rocks', {name: 'Michael', title: 'Sensei'}];
 	for (index in x) {
 		console.log(x[index], typeof(x[index]));
 	}
+// 2:
+	x.push(100);
+// 3:
+	var y = [];
+	x.push(y);
+	console.log(x);
+// 4:
+	var sum = 0;
+	for(var i = 1; i <= 500; i++) {
+		sum += i;
+	}
+	console.log(sum);
+// 5:
+	var sum_million = 0;
+	var now = new Date();
+	var start = now.getTime();
+	for(var i = 1; i <= 1000000; i++) {
+		sum_million += i;
+	}
+	var end = new Date();
+	var finish = end.getTime();
+	var millisecs = finish - start;
+	console.log('The sum of numbers from 1 to 1 million is ' +sum_million + ' and this calculation took ' + millisecs + ' milliseconds!');
 </script>
